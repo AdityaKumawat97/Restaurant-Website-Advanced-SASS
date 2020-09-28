@@ -18,6 +18,10 @@ $font-nunito: "Nunito", sans-serif;
 }
 
 //FLEX
+@mixin flexLayout {
+    display: flex;
+}
+
 @mixin flexLayoutCenter {
     display: flex;
     justify-content: center;
