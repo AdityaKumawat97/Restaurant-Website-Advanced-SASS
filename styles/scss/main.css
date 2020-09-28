@@ -1,3 +1,8 @@
+.card-overlay, .card-img {
+  height: 100%;
+  width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -100,6 +105,14 @@ body {
   padding-left: 50px;
 }
 
+.gallery .cards-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -172,5 +185,75 @@ body {
 .main-btn:hover {
   background-color: #d3ab55;
   color: #262626;
+}
+
+.card {
+  width: 33.3333%;
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover .card-overlay {
+  left: 0;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  left: -100%;
+  background-color: rgba(211, 171, 85, 0.6);
+  color: #fff;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.card-overlay-heading {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.card-overlay-paragraph {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.card-overlay-btn {
+  width: 150px;
+  height: 40px;
+  color: #d3ab55;
+  background-color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #d3ab55;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.card-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.78;
 }
 /*# sourceMappingURL=main.css.map */
